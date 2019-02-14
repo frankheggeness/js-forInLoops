@@ -34,24 +34,35 @@ var donutBox = {
 	price: 5,
 	types: ["old fashion", "glazed", "chocolate", "jelly-filled", "sprinkles", "red velvet"],
 	taste: "fabulous"
-};
+}
 
-
-
+function donutStuff(obj){
+	for(var prop in obj){
+		console.log(prop)
+	}
+}
+donutStuff(donutBox);
 /*2.  Create a function that will take in an object and loop through the properties of that object.
 Console.log the values of the object. Use the donutBox object from the previous exercise above*/
 
 /*@param {Object}
 @return {Object}*/
-
-
+function donutThings(obj){
+	for(var prop in obj){
+		console.log(obj[prop])
+	}
+}
+donutThings(donutBox)
 
 /*3. Create a function that will take in an object and will delete the taste property from the donutBox object above.*/
 
 /*@param {Object}
 @return {Object}*/
-
-
+function delProp(obj){
+	delete obj.taste;
+	console.log(obj);
+}
+delProp(donutBox);
 
 /*4. Create a function that will take in an object and will return all the values of the object in an array.*/
 

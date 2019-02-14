@@ -92,14 +92,30 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 /*@param {Object}
 @return {Number}*/
-
-
+function numProp(obj){
+	numberOfProps = 0;
+	for (var prop in obj){
+		if (obj.hasOwnProperty(prop)){
+			numberOfProps ++
+		}
+	}
+	console.log(numberOfProps)
+}
+numProp(legend);
 
 /*6. Create a function that will take in an object and check to see if the legend object has a property of 'occupation'.*/
 
 /*@param {Object}
 @return {Object}*/
 
+function checkOcc(obj){
+	for (var prop in obj){
+		if (obj.hasOwnProperty('occupation')){
+			return true
+		}else{
+			return false
+		}
+	}
+}
 
-
-
+console.log(checkOcc(legend))
